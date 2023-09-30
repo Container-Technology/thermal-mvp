@@ -2,7 +2,7 @@
   "name": "trustprinter",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "dependencies": {
     "express": "^4.18.2",
     "node-thermal-printer": "^4.4.0"
