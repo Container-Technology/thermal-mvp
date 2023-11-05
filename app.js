@@ -30,13 +30,19 @@ app.get("/", (req, res) => {
   res.send("swag");
 });
 
-app.post("", express.raw({ type: "application/text" }), async (req, res) => {
+app.post("/", (req, res) => {
+  res.send("post req");
+});
+
+app.post("/", express.raw({ type: "application/text" }), async (req, res) => {
   //
 
   printer.alignCenter();
   printer.println("Swagever");
   await printer.printImage("./assets/trust.png");
   printer.cut();
+
+  console.log("post req");
 
   try {
     let execute = printer.execute();
